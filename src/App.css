@@ -1,0 +1,326 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+}
+
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(194,194,194,1) 0%, rgba(233,233,233,1) 21%, rgba(222,222,222,1) 59%, rgba(190,190,190,1) 74%, rgba(147,147,147,1) 91%, rgba(175,175,175,1) 93%, rgba(37,37,37,1) 100%);
+}
+
+.min-loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.loader img{
+  width: 71vh;
+  height: 80%;
+}
+.min-loader img{
+  width: 9vh;
+  height: 50%;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.loader p{
+    font-size: 300%;
+    color: aliceblue;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.card_input{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.card_input2{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.img_input2{
+  height: 43%;
+    width: 32%;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.img2_input2{
+  height: 100%;
+  width: 100%;
+}
+
+.back_img{
+  height: inherit !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.card_input img{
+  height: 12vh;
+  width: 99%;
+  margin-top: 1rem;
+}
+
+.card_primary{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.card_pokedex{
+  margin: 4vh;
+  border-radius: 26px;
+  padding: 1rem;
+  height: 87%;
+  position: relative;
+  box-shadow: inset 17px -6em 3em #0000001a, 1em 1em 1em #6e766f4d;
+}
+
+.card_pokedex img{
+  width: 100%;
+  height: 27vh;
+}
+
+.card_fetch{
+  display: flex;
+    justify-content: center;
+}
+
+.card2_fetch{
+  height: 100%;
+    width: 63vh;
+}
+
+.card2_fetch input{
+  height: 3vh;
+  width: 54%;
+}
+
+.card2_fetch button{
+  height: 3vh;
+    width: 10vh;
+}
+.select_type{
+  height: 100%;
+  width: 216%;
+}
+
+.habilit{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.habilit p{
+  background: #E5E5E5;
+border-radius: 50px;
+font-size: 2.5vh;
+}
+
+.canvas_box{
+  height: 9vh;
+  width: 100%;
+}
+
+.types_info{
+  display: flex;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.types_p{
+  height: 3.2vh;
+  width: 10vh;
+  text-align: center;
+  border: none !important;
+  color: white !important;
+}
+
+.pagination{
+  display: flex;
+    justify-content: center;
+    gap: 1vh;
+    margin-top: 3vh;
+}
+
+.poke_info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.card_info h2{
+  margin-bottom: 1rem;
+}
+
+.poke_sub{
+  background: white;
+  text-align: center;
+}
+
+
+.card_id{
+  background: gainsboro;
+  /* padding: 0 1vh; */
+  margin: 7vh 4vh 0 3vh;
+}
+
+.min_card_id{
+  margin: 0px 4%;
+}
+
+.backgroms{
+  position: relative;
+  /* width: 200rem; */
+  width: 100%;
+  height: 122px;
+}
+
+.backgroms img{
+  position: absolute;
+    top: -69px;
+    left: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.tops{
+  height: 8vh;
+  margin-top: -4rem;
+}
+
+
+
+
+
+
+
+
+.loader2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.loader2 p{
+  color: aliceblue;
+  position: absolute;
+  top: 90%;
+  font-size: 2.4rem;
+}
+
+.loader2 img{
+  width: 73%;
+  height: 91%;
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+.inputs{
+  text-align: center;
+  /* margin: auto 19rem; */
+  border-radius: 5% / 5%;
+  /* width: 200px; */
+  height: 200px;
+  /* background: linear-gradient(180deg, rgba(245,255,0,1) 0%, rgba(255,253,253,1) 57%, rgba(254,255,0,1) 100%); */
+  background: linear-gradient(180deg, rgba(254,255,0,0.8519782913165266) 0%, rgba(255,253,253,1) 57%, rgba(254,255,0,1) 100%);
+}
+
+.IsUnderfined{
+  display: flex;
+  justify-content: center;
+}
+.IsUnderfined img{
+  width: 43vh;
+  height: 43vh;
+  object-fit: cover;
+}
+
+.prueb{
+  animation: infinite camp 1s;
+}
+
+@keyframes camp {
+
+    0% {
+        transform:  rotate(-2deg);
+    }
+    25% {
+        transform:  rotate(3deg);
+    }
+    65% {
+        transform:  rotate(-3deg);
+    }
+    100% {
+      transform:  rotate(-2deg);
+    }
+
+
+}
+
+
+.primary_input{
+  display: flex;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .residents_card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sub_card{
+    margin: 0 20%;
+  }
+}
+
+@media (max-width: 792px) {
+  .Input_2 img{
+    width: 5%;
+    height: 5%;
+  }
+}

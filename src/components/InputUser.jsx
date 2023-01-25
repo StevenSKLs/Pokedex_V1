@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { changeUserName } from "../store/slices/userName.slice";
 import Loader from "./Loader";
 import Pokemons from "./Pokemons";
-import imgs from '../assets/sesped.webp'
-import imgs2 from "../assets/pokemon-eu_3.jpg";
 
 
 const InputUser = () => {
@@ -28,15 +26,9 @@ const InputUser = () => {
     return (
       <div>
           {loader && <Loader/>}
-          {/* <img src={`${Pokemons[1][1]}`} alt="" />
-          <img src={`${Pokemons[1][3]}`} alt="" />
-          <img src={`${Pokemons[1][0]}`} alt="" />
-          <img src={`${Pokemons[2][1]}`} alt="" />
-          <img src={`${Pokemons[2][2]}`} alt="" /> */}
           <div className="card_input">
           <img src={`${Pokemons[6]}`} alt=""/>
-          {/* <img src={`${Pokemons[1][3]}`} alt="" /> */}
-          <img src={`${imgs2}`} alt="" className="back_img"/>
+          <img src={`${Pokemons[7]}`} alt="" className="back_img"/>
           </div>
           <div className="primary_input">
             <div className="inputs">
@@ -53,10 +45,6 @@ const InputUser = () => {
             <h2  className="prueb">Welcom</h2>
             </div>
           </div>
-          {/* <div>
-            <img src={`${imgs}`} alt="" />
-          </div> */}
-          
       </div>
     )
 }

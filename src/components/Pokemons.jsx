@@ -27,6 +27,13 @@ import pokeball_2 from '../assets/pokeball_2.gif'
 
 import pokedex from "../assets/pokedex.svg";
 
+import pokemonue_0 from '../assets/pokemon-eu_0.webp'
+import pokemonue_1 from '../assets/pokemon-eu_1.webp'
+import pokemonue_2 from '../assets/pokemon-eu_2.png'
+import pokemonue_3 from '../assets/pokemon-eu_3.jpg'
+import pokemonue_4 from '../assets/pokemon-eu_4.jpg'
+
+
 const detective =[
     detective_0,
     detective_1,
@@ -66,6 +73,16 @@ const pichu =[
     pichu_1,
 ]
 
+const pokemonue =[
+    pokemonue_0,
+    pokemonue_1,
+    pokemonue_2,
+    pokemonue_3,
+    pokemonue_4,
+]
+    
+const randoms = Math.floor(Math.random() * pokemonue.length)
+
 const pokemons =[
     detective,
     pikachu,
@@ -74,6 +91,7 @@ const pokemons =[
     miu,
     pichu,
     pokedex,
+    pokemonue[randoms],
 ]
 
 export default pokemons

@@ -19,9 +19,9 @@ const Pokedex_Id = () => {
     },[])
 
 
-const [cambios, setcambios] = useState(false)
-const cambio =()=>{
-    setcambios(!cambios)
+const [StatsChanges, setStatsChanges] = useState(false)
+const StatsChange =()=>{
+    setStatsChanges(!StatsChanges)
 }
 
 const contador = []
@@ -120,23 +120,31 @@ let colorInd ={
     }, 5000)
 
     return (
-        <div>
+        <div style={{background: 'gainsboro'}}>
             {loader && <Loader/>}
             <div className="card_input2">
           <img src={`${Pokemons[6]}`} alt="" className="img_input2"/>
-          {/* <img src={`${Pokemons[1][3]}`} alt="" /> */}
           <img src={`${poke}`} alt="" className="img2_input2"/>
           </div>
+
           <h2 onClick={() => navigate(`/pokedex/`)}>hola mundo volver</h2>
+          
             <div className='card_id'>
                 <div style={colors} className='backgroms'>
                 <img src={selectId.sprites?.other.dream_world.front_default} alt="" />
                 </div>
-            <div>
-                <p>Hola soy tu pokimon</p>
+            <div className='min_card_id'>
+
             <h1>{selectId.name}</h1>
+          <hr className='hrs'/>
+          <hr className='hrs2'/>
+
             <p>ID {selectId.id}</p>
-            <b className="types_info">{selectId.types?.map(type =>(         
+
+            <div className='card_stadic'>
+              <div>
+                 <h2>Abiliti</h2>  
+            <b className="types_info">{selectId.types?.map(type =>(    
         <p key={type.type.url} className='types_p' style={ type.type.name ==='grass'?
         colorInd.grass : type.type.name ==='normal'? 
         colorInd.normal:type.type.name ==='fighting'?
@@ -157,11 +165,20 @@ let colorInd ={
         colorInd.dark:colorInd.fairy
         }>
         {type.type.name}</p>
-        ))}
-        <b>{selectId.abilities?.map(abiliti =>(
-            <p key={abiliti.ability.url}>{abiliti.ability.name}</p>
         ))}</b>
-        </b>
+              </div>
+              <div>
+                <h2>Abiliti</h2> 
+        
+        <b className="types_info">{selectId.abilities?.map(abiliti =>(
+            <p key={abiliti.ability.url} className='types_p2'>{abiliti.ability.name}</p>
+        ))}</b> 
+              </div>
+        
+            </div>
+        
+        
+
             <p>Altura {selectId.height}</p>
             <p>Peso:{selectId.weight}</p>
             <div>
@@ -170,14 +187,19 @@ let colorInd ={
                 ))}
             </div>
             </div>
+            
 
-            <button onClick={()=>cambio()}>cambio</button>
+            <button onClick={()=>StatsChange()}>Stats Change</button>
+
+
             <div className='min_card_id'>
-                 {cambios === false ?
+                 {StatsChanges === false ?
             <div>{selectId.stats?.map(stat1 =>(
                 <div key={stat1.stat.url}>
-                <p>{stat1.stat.name}</p>
+                  <div className='stats'>
+                    <p>{stat1.stat.name}</p>
                 <p>{stat1.base_stat} /150</p>
+                  </div>
                 {<BarProgres stadict ={stat1.base_stat}/>}
                 
                 </div>
@@ -186,7 +208,7 @@ let colorInd ={
            
             </div>
             
-        <div>
+        <div className='card_id'>
              <p>habilidades</p>
             <div className='habilit'>{
                 selectId.moves?.map(move =>(

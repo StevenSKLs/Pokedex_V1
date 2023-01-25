@@ -90,10 +90,10 @@
 }
 
 .card_pokedex{
-  margin: 4vh;
+  margin: 1vh;
   border-radius: 26px;
   padding: 1rem;
-  height: 87%;
+  height: 97%;
   position: relative;
   box-shadow: inset 17px -6em 3em #0000001a, 1em 1em 1em #6e766f4d;
 }
@@ -128,17 +128,18 @@
 }
 
 .habilit{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
   gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .habilit p{
   background: #E5E5E5;
-border-radius: 50px;
-font-size: 2.5vh;
+  border-radius: 50px;
+  font-size: 2.4vh;
+  height: 3vh;
+  width: 15vh;
+  text-align: center;
 }
 
 .canvas_box{
@@ -154,10 +155,25 @@ font-size: 2.5vh;
 
 .types_p{
   height: 3.2vh;
-  width: 10vh;
+  width: 23vh;
   text-align: center;
   border: none !important;
   color: white !important;
+}
+
+.card_stadic{
+  display: flex;
+  justify-content: space-around;
+}
+
+.types_p2{
+  height: 3.2vh;
+    width: 23vh;
+    text-align: center;
+    border: none !important;
+    color: white !important;
+    background: ghostwhite;
+    background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(101,100,100,1) 21%, rgba(170,170,170,1) 100%);
 }
 
 .pagination{
@@ -187,13 +203,14 @@ font-size: 2.5vh;
 
 
 .card_id{
-  background: gainsboro;
-  /* padding: 0 1vh; */
+  background: white;
   margin: 7vh 4vh 0 3vh;
 }
 
 .min_card_id{
   margin: 0px 4%;
+  text-align: center;
+  padding: 0px 0px 16px 0rem;
 }
 
 .backgroms{
@@ -203,12 +220,33 @@ font-size: 2.5vh;
   height: 122px;
 }
 
+.hrs{
+  background: gray;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  /* z-index: -1; */
+  height: 47%;
+  width: 40%;
+}
+
+.hrs2{
+  background: gray;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  margin-left: 60%;
+  margin-right: 0%;
+}
+
 .backgroms img{
-  position: absolute;
-    top: -69px;
-    left: 0;
-    height: 200px;
-    width: 100%;
+  height: 166px;
+  width: 100%;
+  margin-top: -4rem;
+}
+
+.stats{
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: -1rem;
 }
 
 .tops{
@@ -255,11 +293,9 @@ font-size: 2.5vh;
 
 .inputs{
   text-align: center;
-  /* margin: auto 19rem; */
-  border-radius: 5% / 5%;
-  /* width: 200px; */
+  border-radius: 11px;
+  width: 30vh;
   height: 200px;
-  /* background: linear-gradient(180deg, rgba(245,255,0,1) 0%, rgba(255,253,253,1) 57%, rgba(254,255,0,1) 100%); */
   background: linear-gradient(180deg, rgba(254,255,0,0.8519782913165266) 0%, rgba(255,253,253,1) 57%, rgba(254,255,0,1) 100%);
 }
 
@@ -298,6 +334,9 @@ font-size: 2.5vh;
 
 .primary_input{
   display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 @keyframes rotation {

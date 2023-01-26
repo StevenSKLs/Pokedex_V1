@@ -148,9 +148,10 @@
 }
 
 .types_info{
-  display: flex;
-    justify-content: center;
-    gap: 1vh;
+  justify-content: center;
+  gap: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .types_p{

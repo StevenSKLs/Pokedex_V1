@@ -31,9 +31,9 @@ const Pokedex = () => {
         navigate(`/pokedex/${inputs.toLowerCase()}`)
     }
   
-    // const [pokemonfilter, setPokemonfilter] = useState('')
     const filterpokemon = e =>{
         axios.get(e.target.value).then(res => setpokedexs(res.data.pokemon))
+        retro()
     }
 
 
@@ -52,20 +52,23 @@ const Pokedex = () => {
       setLoader(false)
       }, 5000)
 
+    const retro = ()=>{
+      setPage(1)
+    }
+
     return (
       <div>
         {loader && <Loader/>}
     
         <div className="card_input2">
           <img src={`${Pokemons[6]}`} alt="" className="img_input2"/>
-          {/* <img src={`${Pokemons[1][3]}`} alt="" /> */}
           <img src={`${poke}`} alt="" className="img2_input2"/>
           </div>
         
 
         <div style={{margin: '0 3vh'}}>
         <h1>Welcome to your pokedex</h1>
-        <p>Pokemon Trainer{userName}!</p>
+        <p>Pokemon Trainer  {userName}!</p>
         
         <div className="card_fetch">
         <div className="card2_fetch">

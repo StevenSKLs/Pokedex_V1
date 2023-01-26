@@ -32,7 +32,7 @@ selectAcces()
       <div className='pagination'>
         {acces.map(number => (
           <div key={number} className='page-item'>
-            <button onClick={() => paginate(number)}>
+            <button onClick={() => paginate(number)} className='bootons2'>
               {number}
             </button>
           </div>

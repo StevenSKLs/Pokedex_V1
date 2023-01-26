@@ -127,23 +127,34 @@ let colorInd ={
           <img src={`${poke}`} alt="" className="img2_input2"/>
           </div>
 
-          <h2 onClick={() => navigate(`/pokedex/`)}>hola mundo volver</h2>
+          <button onClick={() => navigate(`/pokedex/`)} className='bootons'>Return... page</button>
           
             <div className='card_id'>
                 <div style={colors} className='backgroms'>
                 <img src={selectId.sprites?.other.dream_world.front_default} alt="" />
                 </div>
             <div className='min_card_id'>
-
-            <h1>{selectId.name}</h1>
+              <div>
+                    <p>ID #{selectId.id}</p>
+              </div>
+        
+            <h1>{selectId.name?.toUpperCase()}</h1>
           <hr className='hrs'/>
           <hr className='hrs2'/>
-
-            <p>ID {selectId.id}</p>
-
+          <div className='info_2'>
+              <div>
+                  <p>Weight: </p>
+              <b>{selectId.height}</b>
+              </div>
+            <div>
+             <p>Height: </p>
+            <b>{selectId.weight}</b> 
+            </div>
+            
+            </div>
             <div className='card_stadic'>
               <div>
-                 <h2>Abiliti</h2>  
+                 <h2>Type</h2>  
             <b className="types_info">{selectId.types?.map(type =>(    
         <p key={type.type.url} className='types_p' style={ type.type.name ==='grass'?
         colorInd.grass : type.type.name ==='normal'? 
@@ -176,23 +187,14 @@ let colorInd ={
               </div>
         
             </div>
-        
-        
-
-            <p>Altura {selectId.height}</p>
-            <p>Peso:{selectId.weight}</p>
-            <div>
-                {selectId.types?.map(type =>(
-                    <p key={type.type.url}>{type.type.name}</p>
-                ))}
-            </div>
-            </div>
             
-
-            <button onClick={()=>StatsChange()}>Stats Change</button>
-
-
+            </div>  
+            
             <div className='min_card_id'>
+              <div className='stats_change'>
+              <h2>Stats </h2>
+            <button onClick={()=>StatsChange()}>Stats Change</button>
+              </div>
                  {StatsChanges === false ?
             <div>{selectId.stats?.map(stat1 =>(
                 <div key={stat1.stat.url}>
@@ -209,7 +211,7 @@ let colorInd ={
             </div>
             
         <div className='card_id'>
-             <p>habilidades</p>
+           <h2 className='card_moves'>Moves</h2>
             <div className='habilit'>{
                 selectId.moves?.map(move =>(
                    <p key={move.move.url}>{move.move.name}</p> 

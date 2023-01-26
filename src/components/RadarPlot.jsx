@@ -11,7 +11,7 @@ const RadarPlot = ({nuevo}) => {
         appendPadding: [0, 10],
         meta: {
           star: {
-            alias: 'star 数量',
+            alias: 'Stats',
             min: 0,
             nice: true,
             formatter: (v) => Number(v).toFixed(2),
@@ -23,13 +23,15 @@ const RadarPlot = ({nuevo}) => {
         yAxis: {
           label: false,
           grid: {
-            alternateColor: 'rgba(0, 0, 0, 0.04)',
+            alternateColor: ['l(0) 0:#FCD676 1:#E6901E','#E8EDF3'],
           },
         },
         point: {
           size: 1,
         },
-        area: {},
+        area: {
+          color:'red'
+        },
       }
     return (
         <div>
